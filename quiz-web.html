@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Programação Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #c8c7ec;
+            /* Azul claro para o fundo */
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1d3c55;
+            /* Azul escuro para o título */
+        }
+
+        .quiz-container {
+            background-color: #4b86b4;
+            /* Azul médio para o fundo do contêiner */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+            color: #ffffff;
+        }
+
+        .question {
+            margin-bottom: 15px;
+        }
+
+        .question p {
+            font-weight: bold;
+        }
+
+        .answer {
+            margin-left: 20px;
+        }
+
+        .answer input {
+            margin-right: 10px;
+        }
+
+        .result {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.5em;
+        }
+
+        .result p {
+            font-size: 1.2em;
+        }
+
+        .feedback {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .correct {
+            color: #4caf50;
+            /* Verde para respostas corretas */
+        }
+
+        .incorrect {
+            color: #f44336;
+            /* Vermelho para respostas incorretas */
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #357ab7;
+            /* Azul para botões */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #2a4d69;
+            /* Azul escuro para hover no botão */
+        }
+
+        .clear-button {
+            background-color: #b71c1c;
+            /* Vermelho escuro para botão de limpar */
+        }
+
+        .clear-button:hover {
+            background-color: #7f0e0e;
+            /* Vermelho ainda mais escuro para hover */
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Quiz de Programação Web</h1>
+    <div class="quiz-container">
+        <form id="quizForm">
+            <!-- Pergunta 1 -->
+            <div class="question">
+                <p>1. O que significa HTML?</p>
+                <div class="answer">
+                    <label><input type="radio" name="q1" value="A"> A) High-Level Text Markup Language</label><br>
+                    <label><input type="radio" name="q1" value="B"> B) Hyper Transfer Markup Language</label><br>
+                    <label><input type="radio" name="q1" value="C"> C) Hypertext Markup Language</label><br>
+                    <label><input type="radio" name="q1" value="D"> D) Hyperlink Markup Language</label>
+                </div>
+            </div>
+
+            <!-- Pergunta 2 -->
+            <div class="question">
+                <p>2. Qual é a principal função do CSS?</p>
+                <div class="answer">
+                    <label><input type="radio" name="q2" value="A"> A) Organizar o conteúdo da página</label><br>
+                    <label><input type="radio" name="q2" value="B"> B) Estilizar e formatar o conteúdo da
+                        página</label><br>
+                    <label><input type="radio" name="q2" value="C"> C) Definir o comportamento da página</label><br>
+                    <label><input type="radio" name="q2" value="D"> D) Aumentar a velocidade da página</label>
+                </div>
+            </div>
+
+            <!-- Pergunta 3 -->
+            <div class="question">
+                <p>3. O que significa "JS" em "JavaScript"?</p>
+                <div class="answer">
+                    <label><input type="radio" name="q3" value="A"> A) Java Style</label><br>
+                    <label><input type="radio" name="q3" value="B"> B) JavaScript</label><br>
+                    <label><input type="radio" name="q3" value="C"> C) Java Serialization</label><br>
+                    <label><input type="radio" name="q3" value="D"> D) Java System</label>
+                </div>
+            </div>
+
+            <!-- Pergunta 4 -->
+            <div class="question">
+                <p>4. Qual tag HTML é usada para criar um link?</p>
+                <div class="answer">
+                    <label><input type="radio" name="q4" value="A"> A) &lt;link&gt;</label><br>
+                    <label><input type="radio" name="q4" value="B"> B) &lt;a&gt;</label><br>
+                    <label><input type="radio" name="q4" value="C"> C) &lt;href&gt;</label><br>
+                    <label><input type="radio" name="q4" value="D"> D) &lt;url&gt;</label>
+                </div>
+            </div>
+
+            <!-- Pergunta 5 -->
+            <div class="question">
+                <p>5. Qual propriedade CSS altera a cor de fundo de um elemento?</p>
+                <div class="answer">
+                    <label><input type="radio" name="q5" value="A"> A) color</label><br>
+                    <label><input type="radio" name="q5" value="B"> B) font-color</label><br>
+                    <label><input type="radio" name="q5" value="C"> C) background-color</label><br>
+                    <label><input type="radio" name="q5" value="D"> D) bg-color</label>
+                </div>
+            </div>
+
+            <!-- Pergunta 6 -->
+            <div class="question">
+                <p>6. Qual evento JavaScript é disparado ao clicar em um elemento?</p>
+                <div class="answer">
+                    <label><input type="radio" name="q6" value="A"> A) onchange</label><br>
+                    <label><input type="radio" name="q6" value="B"> B) onclick</label><br>
+                    <label><input type="radio" name="q6" value="C"> C) onhover</label><br>
+                    <label><input type="radio" name="q6" value="D"> D) onpress</label>
+                </div>
+            </div>
+
+            <!-- Pergunta 7 -->
+            <div class="question">
+                <p>7. O que significa DOM em JavaScript?</p>
+                <div class="answer">
+                    <label><input type="radio" name="q7" value="A"> A) Data Object Model</label><br>
+                    <label><input type="radio" name="q7" value="B"> B) Document Object Model</label><br>
+                    <label><input type="radio" name="q7" value="C"> C) Document Observer Model</label><br>
+                    <label><input type="radio" name="q7" value="D"> D) Data Oriented Model</label>
+                </div>
+            </div>
+
+            <!-- Pergunta 8 -->
+            <div class="question">
+                <p>8. Qual linguagem é usada para criar a estrutura de uma página web?</p>
+                <div class="answer">
+                    <label><input type="radio" name="q8" value="A"> A) CSS</label><br>
+                    <label><input type="radio" name="q8" value="B"> B) JavaScript</label><br>
+                    <label><input type="radio" name="q8" value="C"> C) HTML</label><br>
+                    <label><input type="radio" name="q8" value="D"> D) SQL</label>
+                </div>
+            </div>
+
+            <!-- Pergunta 9 -->
+            <div class="question">
+                <p>9. Qual unidade de medida é relativa ao tamanho da fonte em CSS?</p>
+                <div class="answer">
+                    <label><input type="radio" name="q9" value="A"> A) em</label><br>
+                    <label><input type="radio" name="q9" value="B"> B) px</label><br>
+                    <label><input type="radio" name="q9" value="C"> C) cm</label><br>
+                    <label><input type="radio" name="q9" value="D"> D) pt</label>
+                </div>
+            </div>
+
+            <!-- Pergunta 10 -->
+            <div class="question">
+                <p>10. Qual atributo HTML define uma imagem?</p>
+                <div class="answer">
+                    <label><input type="radio" name="q10" value="A"> A) href</label><br>
+                    <label><input type="radio" name="q10" value="B"> B) src</label><br>
+                    <label><input type="radio" name="q10" value="C"> C) alt</label><br>
+                    <label><input type="radio" name="q10" value="D"> D) link</label>
+                </div>
+            </div>
+
+            <div style="text-align: center;">
+                <button type="button" onclick="calcularResultado()">Verificar Respostas</button>
+                <button type="button" class="clear-button" onclick="limparRespostas()">Limpar Respostas</button>
+            </div>
+        </form>
+
+        <div class="result" id="result">
+            <p id="score"></p>
+            <div class="feedback" id="feedback"></div>
+        </div>
+    </div>
+
+    <script>
+        // Respostas corretas para o quiz
+        const respostasCorretas = {
+            q1: 'C',
+            q2: 'B',
+            q3: 'B',
+            q4: 'B',
+            q5: 'C',
+            q6: 'B',
+            q7: 'B',
+            q8: 'C',
+            q9: 'A',
+            q10: 'B'
+        };
+
+        // Função para calcular o resultado
+        function calcularResultado() {
+            let pontos = 0;
+            const respostaUsuario = {};
+            const formulario = document.forms['quizForm'];
+
+            // Coleta as respostas dos usuários
+            for (let i = 1; i <= Object.keys(respostasCorretas).length; i++) {
+                const pergunta = formulario['q' + i];
+                if (pergunta) {
+                    for (let j = 0; j < pergunta.length; j++) {
+                        if (pergunta[j].checked) {
+                            respostaUsuario['q' + i] = pergunta[j].value;
+                            break;
+                        }
+                    }
+                }
+            }
+
+            // Calcula os pontos e cria feedback
+            let feedbackHTML = '';
+            for (let i = 1; i <= Object.keys(respostasCorretas).length; i++) {
+                const respostaCorreta = respostasCorretas['q' + i];
+                const respostaEscolhida = respostaUsuario['q' + i];
+                if (respostaEscolhida === respostaCorreta) {
+                    pontos++;
+                    feedbackHTML += `<p class="correct">Pergunta ${i}: Correto!</p>`;
+                } else {
+                    feedbackHTML += `<p class="incorrect">Pergunta ${i}: Incorreto. A resposta correta é "${respostaCorreta}".</p>`;
+                }
+            }
+
+            // Exibe pontuação e feedback
+            document.getElementById('score').innerText = `Você acertou ${pontos} de ${Object.keys(respostasCorretas).length} perguntas.`;
+            document.getElementById('feedback').innerHTML = feedbackHTML;
+            document.getElementById('result').style.display = 'block';
+        }
+
+        // Função para limpar as respostas
+        function limparRespostas() {
+            const formulario = document.forms['quizForm'];
+            for (let i = 1; i <= Object.keys(respostasCorretas).length; i++) {
+                const pergunta = formulario['q' + i];
+                if (pergunta) {
+                    for (let j = 0; j < pergunta.length; j++) {
+                        pergunta[j].checked = false;
+                    }
+                }
+            }
+            document.getElementById('result').style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>
